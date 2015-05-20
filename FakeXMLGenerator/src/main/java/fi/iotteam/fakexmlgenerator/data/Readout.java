@@ -22,14 +22,17 @@ public class Readout {
     protected String time;
     
     @XmlAttribute
-    protected String type;
+    protected String unit;
+    
+    @XmlAttribute
+    protected String quantity;
     
     @XmlAttribute
     protected double value;
 
     public Readout() {
     }
-    
+
     public String getTime() {
         return time;
     }
@@ -38,12 +41,20 @@ public class Readout {
         this.time = time;
     }
 
-    public String getType() {
-        return type;
+    public String getUnit() {
+        return unit;
     }
 
-    public void setType(String type) {
-        this.type = type;
+    public void setUnit(String unit) {
+        this.unit = unit;
+    }
+
+    public String getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(String quantity) {
+        this.quantity = quantity;
     }
 
     public double getValue() {
