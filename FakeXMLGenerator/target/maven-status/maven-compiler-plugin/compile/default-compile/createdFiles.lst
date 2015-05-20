@@ -1,0 +1,10 @@
+fi/iotteam/fakexmlgenerator/data/Device.class
+fi/iotteam/fakexmlgenerator/controllers/DataSourceController.class
+fi/iotteam/fakexmlgenerator/convertors/XMLConvertor.class
+fi/iotteam/fakexmlgenerator/data/Sensor.class
+fi/iotteam/fakexmlgenerator/data/Readout.class
+fi/iotteam/fakexmlgenerator/data/Header.class
+fi/iotteam/fakexmlgenerator/Application.class
+fi/iotteam/fakexmlgenerator/data/DataObjectFactory.class
+fi/iotteam/fakexmlgenerator/data/DataObject.class
+fi/iotteam/fakexmlgenerator/controllers/IndexController.class
