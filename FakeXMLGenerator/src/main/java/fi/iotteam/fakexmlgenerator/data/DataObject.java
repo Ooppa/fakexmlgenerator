@@ -21,6 +21,9 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlRootElement(name = "datasource")
 public class DataObject {
     @XmlElement
+    protected Long id;
+    
+    @XmlElement
     protected Header header;
     
     @XmlElementWrapper(name = "devices")
