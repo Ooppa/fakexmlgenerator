@@ -21,7 +21,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlRootElement(name = "datasource")
 public class DataObject {
     @XmlElement
-    protected Long id;
+    protected String id;
     
     @XmlElement
     protected Header header;
@@ -29,6 +29,14 @@ public class DataObject {
     @XmlElementWrapper(name = "devices")
     @XmlElement(name = "device")
     protected List<Device> devices;
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
 
     public DataObject() {
     }
