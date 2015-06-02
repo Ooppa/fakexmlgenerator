@@ -15,11 +15,6 @@ import java.util.UUID;
  * @author ooppa
  */
 public class DataObjectFactory {
-    
-    private static final String datasourceid = "source-";
-    private static final String deviceid = "dev-";
-    private static final String sensorid = "sensor-";
-    private static final long startTime = System.currentTimeMillis();
 
     /**
      * Returns a randomly generated DataObject
@@ -28,7 +23,7 @@ public class DataObjectFactory {
     public static DataObject getRandomDataObject() {
         DataObject obj = new DataObject();
 
-        obj.setId(datasourceid);
+        obj.setId(UUID.randomUUID().toString());
         obj.setHeader(getHeader());
         obj.setDevices(new ArrayList<Device>());
         
@@ -43,17 +38,15 @@ public class DataObjectFactory {
         Header header = new Header();
 
         header.setResponse("success");
-        header.setUptime(startTime - System.currentTimeMillis());
+        header.setUptime(randInt(1000, 10000));
         
         return header;
     }
     
-    private static int deviceindex = 0;
-    
     private static Device getDevice(){
         Device device = new Device();
 
-        device.setId(deviceid + deviceindex++);
+        device.setId(uuid());
         device.setStatus(true);
         device.setSensors(new ArrayList<Sensor>());
         
@@ -64,11 +57,9 @@ public class DataObjectFactory {
         return device;
     }
     
-    private static int sensorindex = 0;
-    
     private static Sensor getSensor(){
         Sensor sensor = new Sensor();
-        sensor.setId(sensorid + sensorindex++);
+        sensor.setId(uuid());
         sensor.setReadouts(new ArrayList<Readout>());
         
         long currtime = System.currentTimeMillis();
@@ -82,7 +73,7 @@ public class DataObjectFactory {
     
     private static Readout getReadout(long currentTime){
         Readout readout = new Readout();
-        readout.setTime(currentTime);
+        readout.setTime("" + (currentTime - 1));
         readout.setQuantity("Temperature");
         readout.setUnit("C");
         
@@ -98,5 +89,15 @@ public class DataObjectFactory {
         Random random = new Random();
 
         return min + random.nextDouble();
+    }
+
+    private static int randInt(int min, int max) {
+        Random random = new Random();
+
+        return random.nextInt(max) + min;
+    }
+
+    private static String uuid() {
+        return UUID.randomUUID().toString();
     }
 }

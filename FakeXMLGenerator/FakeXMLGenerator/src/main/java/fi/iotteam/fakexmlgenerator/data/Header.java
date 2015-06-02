@@ -22,7 +22,7 @@ public class Header {
     protected String response;
     
     @XmlElement
-    protected long uptime;
+    protected int uptime;
 
     public Header() {
     }
@@ -35,11 +35,11 @@ public class Header {
         this.response = responce;
     }
 
-    public long getUptime() {
+    public int getUptime() {
         return uptime;
     }
 
-    public void setUptime(long uptime) {
+    public void setUptime(int uptime) {
         this.uptime = uptime;
     }
     

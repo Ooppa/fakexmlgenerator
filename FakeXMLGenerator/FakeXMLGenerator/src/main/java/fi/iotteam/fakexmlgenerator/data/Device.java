@@ -11,6 +11,7 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElementWrapper;
+import javax.xml.bind.annotation.XmlList;
 import javax.xml.bind.annotation.XmlRootElement;
 
 /**
@@ -18,16 +19,19 @@ import javax.xml.bind.annotation.XmlRootElement;
  * @author ooppa
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlRootElement(name = "sensor")
-public class Sensor {
+@XmlRootElement(name = "device")
+public class Device {
     @XmlAttribute
     protected String id;
     
-    @XmlElement(name = "readout")
-    @XmlElementWrapper(name = "readouts")
-    protected List<Readout> readouts;
+    @XmlAttribute
+    protected boolean status;
 
-    public Sensor() {
+    @XmlElement(name = "sensor")
+    @XmlElementWrapper(name = "sensors")
+    protected List<Sensor> sensors;
+
+    public Device() {
     }
 
     public String getId() {
@@ -38,12 +42,21 @@ public class Sensor {
         this.id = id;
     }
 
-    public List<Readout> getReadouts() {
-        return readouts;
+    public boolean isStatus() {
+        return status;
     }
 
-    public void setReadouts(List<Readout> readouts) {
-        this.readouts = readouts;
+    public void setStatus(boolean status) {
+        this.status = status;
     }
 
+    public List<Sensor> getSensors() {
+        return sensors;
+    }
+
+    public void setSensors(List<Sensor> sensors) {
+        this.sensors = sensors;
+    }
+    
+    
 }

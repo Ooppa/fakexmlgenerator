@@ -19,7 +19,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 public class Readout {
     
     @XmlAttribute
-    protected long time;
+    protected String time;
     
     @XmlAttribute
     protected String unit;
@@ -33,11 +33,11 @@ public class Readout {
     public Readout() {
     }
 
-    public long getTime() {
+    public String getTime() {
         return time;
     }
 
-    public void setTime(long time) {
+    public void setTime(String time) {
         this.time = time;
     }
 
