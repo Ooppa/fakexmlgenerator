@@ -11,7 +11,6 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElementWrapper;
-import javax.xml.bind.annotation.XmlList;
 import javax.xml.bind.annotation.XmlRootElement;
 
 /**
@@ -19,17 +18,17 @@ import javax.xml.bind.annotation.XmlRootElement;
  * @author ooppa
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlRootElement(name = "datasource")
-public class DataObject {
+@XmlRootElement(name = "sensor")
+public class Sensor {
     @XmlAttribute
     protected String id;
     
-    @XmlElement
-    protected Header header;
-    
-    @XmlElementWrapper(name = "devices")
-    @XmlElement(name = "device")
-    protected List<Device> devices;
+    @XmlElement(name = "readout")
+    @XmlElementWrapper(name = "readouts")
+    protected List<Readout> readouts;
+
+    public Sensor() {
+    }
 
     public String getId() {
         return id;
@@ -39,23 +38,12 @@ public class DataObject {
         this.id = id;
     }
 
-    public DataObject() {
+    public List<Readout> getReadouts() {
+        return readouts;
     }
 
-    public Header getHeader() {
-        return header;
-    }
-
-    public void setHeader(Header header) {
-        this.header = header;
-    }
-
-    public List<Device> getDevices() {
-        return devices;
-    }
-
-    public void setDevices(List<Device> devices) {
-        this.devices = devices;
+    public void setReadouts(List<Readout> readouts) {
+        this.readouts = readouts;
     }
 
 }

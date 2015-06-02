@@ -19,17 +19,20 @@ import javax.xml.bind.annotation.XmlRootElement;
  * @author ooppa
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlRootElement(name = "datasource")
-public class DataObject {
+@XmlRootElement(name = "device")
+public class Device {
     @XmlAttribute
     protected String id;
     
-    @XmlElement
-    protected Header header;
-    
-    @XmlElementWrapper(name = "devices")
-    @XmlElement(name = "device")
-    protected List<Device> devices;
+    @XmlAttribute
+    protected boolean status;
+
+    @XmlElement(name = "sensor")
+    @XmlElementWrapper(name = "sensors")
+    protected List<Sensor> sensors;
+
+    public Device() {
+    }
 
     public String getId() {
         return id;
@@ -39,23 +42,21 @@ public class DataObject {
         this.id = id;
     }
 
-    public DataObject() {
+    public boolean isStatus() {
+        return status;
     }
 
-    public Header getHeader() {
-        return header;
+    public void setStatus(boolean status) {
+        this.status = status;
     }
 
-    public void setHeader(Header header) {
-        this.header = header;
+    public List<Sensor> getSensors() {
+        return sensors;
     }
 
-    public List<Device> getDevices() {
-        return devices;
+    public void setSensors(List<Sensor> sensors) {
+        this.sensors = sensors;
     }
-
-    public void setDevices(List<Device> devices) {
-        this.devices = devices;
-    }
-
+    
+    
 }
