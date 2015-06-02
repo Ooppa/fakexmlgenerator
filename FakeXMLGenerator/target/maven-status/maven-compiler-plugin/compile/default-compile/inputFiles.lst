@@ -1,9 +1,0 @@
-/home/ooppa/Documents/Git/fakexmlgenerator/FakeXMLGenerator/src/main/java/fi/iotteam/fakexmlgenerator/Application.java
-/home/ooppa/Documents/Git/fakexmlgenerator/FakeXMLGenerator/src/main/java/fi/iotteam/fakexmlgenerator/convertors/XMLConvertor.java
-/home/ooppa/Documents/Git/fakexmlgenerator/FakeXMLGenerator/src/main/java/fi/iotteam/fakexmlgenerator/data/Device.java
-/home/ooppa/Documents/Git/fakexmlgenerator/FakeXMLGenerator/src/main/java/fi/iotteam/fakexmlgenerator/data/Sensor.java
-/home/ooppa/Documents/Git/fakexmlgenerator/FakeXMLGenerator/src/main/java/fi/iotteam/fakexmlgenerator/data/Header.java
-/home/ooppa/Documents/Git/fakexmlgenerator/FakeXMLGenerator/src/main/java/fi/iotteam/fakexmlgenerator/controllers/IndexController.java
-/home/ooppa/Documents/Git/fakexmlgenerator/FakeXMLGenerator/src/main/java/fi/iotteam/fakexmlgenerator/data/DataObjectFactory.java
-/home/ooppa/Documents/Git/fakexmlgenerator/FakeXMLGenerator/src/main/java/fi/iotteam/fakexmlgenerator/data/Readout.java
-/home/ooppa/Documents/Git/fakexmlgenerator/FakeXMLGenerator/src/main/java/fi/iotteam/fakexmlgenerator/data/DataObject.java
