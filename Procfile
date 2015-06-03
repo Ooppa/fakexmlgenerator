@@ -1,1 +1,1 @@
-java $JAVA_OPTS -cp target/classes:target/dependency/* fi.iotteam.fakexmlgenerator.Application
+web: java $JAVA_OPTS -jar target/FakeXMLGenerator-1.0-SNAPSHOT.war
