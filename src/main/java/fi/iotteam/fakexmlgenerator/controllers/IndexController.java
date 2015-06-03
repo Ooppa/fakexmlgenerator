@@ -20,7 +20,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class IndexController {
 
-    @RequestMapping(value="*", produces = "text/xml; charset=utf-8")
+    @RequestMapping(value="/", produces = "text/xml; charset=utf-8")
     @ResponseBody
     public String index( Model model ) {
         try {
